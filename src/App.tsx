@@ -6,7 +6,7 @@ import Wrapper from "./PlanetDance/Wrapper";
 import BACKGROUND_MUSIC from "./PlanetDance/audio/3.mp3";
 import { Howl } from "howler";
 
-const audio = [{ sound: BACKGROUND_MUSIC, label: "LOL" }];
+const audio = [{ sound: BACKGROUND_MUSIC, label: "Background_music" }];
 
 class App extends React.Component {
   soundPlay = (src: any) => {
@@ -30,6 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <title>PlanetDance</title>
         <div className="App">
           <Wrapper />
         </div>
