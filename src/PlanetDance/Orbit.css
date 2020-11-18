@@ -1,0 +1,28 @@
+@keyframes orbit {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  border-radius: 100%;
+}
+
+#moonOrbit {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: -15px;
+  margin-top: -40px;
+  border-radius: 100%;
+  animation: orbit 5s linear infinite;
+}

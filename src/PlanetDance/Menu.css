@@ -1,0 +1,29 @@
+.menu {
+  margin: 30px;
+}
+.title {
+  margin: 0;
+  margin-top: 50px;
+  text-align: center;
+  width: auto;
+  /* font-size: 200px;
+  background: -webkit-radial-gradient(cyan, blue);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.btn {
+  font-size: 40px;
+  background: #066e94;
+  border-color: #139ec1;
+}
+
+.reset {
+  margin: 30px;
+  position: absolute;
+}
+
+.title_container {
+  width: 100%;
+}

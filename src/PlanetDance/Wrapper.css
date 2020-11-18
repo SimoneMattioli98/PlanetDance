@@ -1,0 +1,20 @@
+@keyframes starPulse {
+  from {
+    opacity: 10;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+#universe {
+  background-image: url("./img/universe.jpg");
+}
+
+#stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img.pngio.com/star-png-images-transparent-free-download-pngmartcom-transparent-stars-background-1680_480.png");
+  animation: starPulse 2s infinite alternate;
+}

@@ -1,0 +1,19 @@
+@keyframes sunFire {
+  from {
+    box-shadow: 0 0 50px #f5c91a;
+  }
+  to {
+    box-shadow: 0 0 100px #f5c91a;
+  }
+}
+
+#sun {
+  position: absolute;
+  z-index: 4;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px;
+}
