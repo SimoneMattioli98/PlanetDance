@@ -155,7 +155,7 @@ class Menu extends Component<{}, State> {
         <div className="title_container">
           <img
             className="title"
-            src="https://github.com/SimoneMattioli98/PlanetDance/blob/main/src/PlanetDance/img/planet_dance_title.png?raw=true"
+            src="https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/planet_dance_title.png?raw=true"
             alt="title"
           />
         </div>

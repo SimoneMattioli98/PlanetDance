@@ -6,7 +6,7 @@ interface Prop {
 }
 export default class Neptune extends Component<Prop, {}> {
   image =
-    "https://github.com/SimoneMattioli98/PlanetDance/blob/main/src/PlanetDance/img/neptune.png?raw=true";
+    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/neptune.png?raw=true";
   orbitDimension = 700;
   orbitDirection = "";
   orbitSpeed = 823.9;

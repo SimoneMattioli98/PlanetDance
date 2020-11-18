@@ -8,7 +8,7 @@ interface Prop {
 
 export default class Mars extends Component<Prop, {}> {
   image =
-    "https://github.com/SimoneMattioli98/PlanetDance/blob/main/src/PlanetDance/img/mars.png?raw=true";
+    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/mars.png?raw=true";
   orbitDimension = this.props.resize ? 600 / 2 : 600;
   orbitDirection = "";
   orbitSpeed = 9.4;

@@ -6,7 +6,7 @@ interface Prop {
 }
 export default class Mercury extends Component<Prop, {}> {
   image =
-    "https://github.com/SimoneMattioli98/PlanetDance/blob/main/src/PlanetDance/img/mercury.png?raw=true";
+    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/mercury.png?raw=true";
   orbitDimension = this.props.resize ? 150 / 2 : 150;
   orbitDirection = "";
   orbitSpeed = 1.2;

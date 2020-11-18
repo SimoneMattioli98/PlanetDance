@@ -7,7 +7,7 @@ interface Prop {
 }
 export default class Uranus extends Component<Prop, {}> {
   image =
-    "https://github.com/SimoneMattioli98/PlanetDance/blob/main/src/PlanetDance/img/uranus.png?raw=true";
+    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/uranus.png?raw=true";
   orbitDimension = this.props.resize ? 700 / 2 : 700;
   orbitDirection = "";
   orbitSpeed = 420.08 / 4;
