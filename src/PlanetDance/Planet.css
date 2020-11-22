@@ -2,17 +2,16 @@
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -25px;
   transform: rotate(120deg);
 }
 
-#moon {
+/* #moon {
   height: 15px;
   width: 15px;
   background: grey;
   background: radial-gradient(#ddd, #888);
   border-radius: 100%;
-}
+} */
 
 .primary .secondary {
   -webkit-animation: spin 4s linear infinite;

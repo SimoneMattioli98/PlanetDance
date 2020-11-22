@@ -1,20 +1,29 @@
-.menu {
-  margin: 30px;
-}
-.title {
+.group {
   margin: 0;
-  margin-top: 50px;
-  text-align: center;
-  width: auto;
-  /* font-size: 200px;
-  background: -webkit-radial-gradient(cyan, blue);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  margin-top: 2%;
+  display: inline-block;
 }
 
-.btn {
-  font-size: 40px;
+
+.btn_container{
+  width: 100%;
+  text-align: center;
+}
+
+.pattern_wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.menu_wrapper{
+  width: 100%;
+  text-align: center;
+}
+
+.btn {  
+  font-size: 160%;
   background: #066e94;
   border-color: #139ec1;
 }
@@ -26,4 +35,12 @@
 
 .title_container {
   width: 100%;
+}
+
+.title {
+  size: 30%;
+  margin: 0;
+  margin-top: 2%;
+  text-align: center;
+  width: 40%;
 }

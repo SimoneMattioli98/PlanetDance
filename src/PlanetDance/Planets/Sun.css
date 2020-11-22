@@ -7,7 +7,7 @@
   }
 }
 
-#sun {
+/* #sun {
   position: absolute;
   z-index: 4;
   width: 80px;
@@ -16,4 +16,15 @@
   left: 50%;
   margin-top: -40px;
   margin-left: -40px;
-}
+  object-fit: cover;
+} */
+
+/* #sun {
+  position: absolute;
+  z-index: 4;
+  width: 5%;
+  height: 10%;
+  top: 45%;
+  left: 47.5%;
+} */
+

@@ -4,7 +4,7 @@ import Lines from "./Lines";
 import Earth from "./Planets/Earth";
 import Mercury from "./Planets/Mercury";
 import Neptune from "./Planets/Neptune";
-import Sun from "./Planets/Sun";
+import Sun_prova from "./Planets/Sun_prova";
 import Mars from "./Planets/Mars";
 import Uranus from "./Planets/Uranus";
 import Venus from "./Planets/Venus";
@@ -92,17 +92,7 @@ class Menu extends Component<{}, State> {
     });
   };
 
-  componentDidMount() {
-    window.addEventListener("resize", function () {
-      var container = document.getElementById("menu_container") as HTMLElement;
-      if (container) {
-        if (window.innerHeight >= 1000 && window.innerWidth >= 1500) {
-          container.style.width = window.innerWidth + "px";
-          container.style.height = window.innerHeight + "px";
-        }
-      }
-    });
-  }
+  
 
   select = (e: EventTarget & HTMLInputElement) => {
     var value = Number(e.value);
@@ -135,7 +125,7 @@ class Menu extends Component<{}, State> {
           <Button className="reset btn" onClick={this.reset} variant="primary">
             Reset
           </Button>
-          <Sun />
+          <Sun_prova />
           {this.getPlanet(this.state.primary, "primary")}
           {this.getPlanet(this.state.secondary, "secondary")}
           <Lines />
@@ -144,22 +134,18 @@ class Menu extends Component<{}, State> {
     }
     return (
       <div
-        id="menu_container"
-        style={{
-          position: "absolute",
-          width: window.innerWidth,
-          height: window.innerHeight,
-          textAlign: "center",
-        }}
+        className="menu_wrapper"
       >
         <div className="title_container">
           <img
             className="title"
             src="https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/planet_dance_title.png?raw=true"
             alt="title"
+            
           />
         </div>
-        <ToggleButtonGroup className="menu" type="checkbox" name="options">
+        <div className="btn-container">
+        <ToggleButtonGroup className="group" type="checkbox" name="options">
           <ToggleButton
             className="btn"
             onChange={(e) => {
@@ -234,6 +220,7 @@ class Menu extends Component<{}, State> {
             Neptune
           </ToggleButton>
         </ToggleButtonGroup>
+        </div>
       </div>
     );
   }

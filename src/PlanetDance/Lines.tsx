@@ -64,10 +64,8 @@ export default class Lines extends Component<{}, {}> {
 
     window.addEventListener("resize", function () {
       const newcontext = canvasEle.getContext("2d") as CanvasRenderingContext2D;
-      if (window.innerHeight >= 1000 && window.innerWidth >= 1500) {
-        canvasEle.width = window.innerWidth;
-        canvasEle.height = window.innerHeight;
-      }
+      canvasEle.width = window.innerWidth;
+      canvasEle.height = window.innerHeight;
       newcontext.fillStyle = "rgba(0,0,0,0)";
       newcontext.fillRect(0, 0, context.canvas.width, context.canvas.height);
       context.closePath();

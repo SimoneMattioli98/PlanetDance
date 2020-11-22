@@ -1,20 +1,18 @@
 import React, { Component } from "react";
 import Orbit from "../Orbit";
-
 interface Prop {
   id: string;
   resize: boolean;
 }
-
-export default class Mars extends Component<Prop, {}> {
+export default class Sun_prova extends Component<{}, {}> {
   image =
-    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/mars.png?raw=true";
-  // orbitDimension = this.props.resize ? 600 / 2 : 600;
+    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/sun.gif?raw=true";
+
+  // orbitDimension = this.props.resize ? 700 / 2 : 700; //308
   orbitDimension = 30;
   orbitDirection = "";
-  orbitSpeed = 9.4;
-  planetDimension = 10;
-
+  orbitSpeed = 0;
+  planetDimension = 20;
   render() {
     return (
       <Orbit
@@ -23,7 +21,7 @@ export default class Mars extends Component<Prop, {}> {
         orbitSpeed={this.orbitSpeed}
         planet={{
           planetDimension: this.planetDimension,
-          planetName: this.props.id,
+          planetName: "sun",
           planetImage: this.image,
         }}
       ></Orbit>

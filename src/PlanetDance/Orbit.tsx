@@ -16,15 +16,12 @@ export interface OrbitProps {
 export default class Orbit extends Component<OrbitProps, {}> {
   render() {
     const orbitStyle = {
-      width: this.props.orbitDimension,
-      height: this.props.orbitDimension,
-      margin:
-        "-" +
-        this.props.orbitDimension / 2 +
-        "px 0px 0px -" +
-        this.props.orbitDimension / 2 +
-        "px",
-      animation:
+      width: this.props.orbitDimension + "%",
+      height: this.props.orbitDimension + "%",
+      left: 50 - (this.props.orbitDimension / 2)+"%" ,
+      top: 50 - (this.props.orbitDimension / 2)+"%", 
+        
+        animation:
         "orbit " +
         this.props.orbitSpeed +
         "s linear " +

@@ -10,10 +10,11 @@ export default class Jupiter extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/jupiter.png?raw=true";
 
-  orbitDimension = this.props.resize ? 700 / 2 : 700; // 151
+  // orbitDimension = this.props.resize ? 700 / 2 : 700; // 151
+  orbitDimension = 30;
   orbitDirection = "";
   orbitSpeed = 59.3;
-  planetDimension = 50;
+  planetDimension = 10;
   render() {
     return (
       <Orbit
