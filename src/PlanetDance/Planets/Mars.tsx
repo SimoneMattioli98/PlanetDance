@@ -4,15 +4,16 @@ import Orbit from "../Orbit";
 interface Prop {
   id: string;
   resize: boolean;
+  fixSpeed: number;
+
 }
 
 export default class Mars extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/mars.png?raw=true";
-  // orbitDimension = this.props.resize ? 600 / 2 : 600;
-  orbitDimension = 60;
+  orbitDimension = this.props.resize ? 60 / 2 : 60;
   orbitDirection = "";
-  orbitSpeed = 9.4;
+  orbitSpeed = 9.4 / this.props.fixSpeed;
   planetDimension = 5;
 
   render() {

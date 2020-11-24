@@ -3,14 +3,15 @@ import Orbit from "../Orbit";
 interface Prop {
   id: string;
   resize: boolean;
+  fixSpeed: number;
+
 }
 export default class Mercury extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/mercury.png?raw=true";
-  // orbitDimension = this.props.resize ? 150 / 2 : 150;
   orbitDimension = 10 ;
   orbitDirection = "";
-  orbitSpeed = 1.2;
+  orbitSpeed = 1.2 / this.props.fixSpeed;
   planetDimension = 10;
   render() {
     return (

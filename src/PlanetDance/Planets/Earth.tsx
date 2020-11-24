@@ -4,15 +4,15 @@ import Orbit from "../Orbit";
 interface Prop {
   id: string;
   resize: boolean;
+  fixSpeed: number;
 }
 
 export default class Earth extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/earth.png?raw=true";
-  // orbitDimension = this.props.resize ? 500 / 2 : 500;
   orbitDimension = this.props.resize ? 50 / 2 : 50;
   orbitDirection = "";
-  orbitSpeed = 5;
+  orbitSpeed = 5 / this.props.fixSpeed;
   planetDimension = 5;
 
   render() {

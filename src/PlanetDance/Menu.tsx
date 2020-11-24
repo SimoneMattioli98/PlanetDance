@@ -15,18 +15,9 @@ import "./Menu.css";
 interface State {
   primary: number;
   secondary: number;
+  speed: number;
 }
 
-const map: string[] = [
-  "Mercury",
-  "Venus",
-  "Earth",
-  "Mars",
-  "Jupiter",
-  "Saturn",
-  "Uranus",
-  "Neptune",
-];
 
 class Menu extends Component<{}, State> {
   constructor(props: any) {
@@ -35,50 +26,29 @@ class Menu extends Component<{}, State> {
     this.state = {
       primary: 0,
       secondary: 0,
+      speed: 1
     };
   }
-
-  getPrimaryPlanet = (value: number, id: string) => {
-    switch (value) {
-      case 2:
-        return <Venus id={id} resize={false} />;
-      case 3:
-        return <Earth id={id} resize={false} />;
-      case 4:
-        return <Mars id={id} resize={false} />;
-      case 5:
-        return <Jupiter id={id} resize={false} />;
-      case 6:
-        return <Saturn id={id} resize={false} />;
-      case 7:
-        return <Uranus id={id} resize={false} />;
-      case 8:
-        return <Neptune id={id} />;
-
-      default:
-        break;
-    }
-  };
 
   getPlanet = (value: number, id: string) => {
     var resize = this.state.primary > value;
     switch (value) {
       case 1:
-        return <Mercury id={id} resize={resize} />;
+        return <Mercury id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 2:
-        return <Venus id={id} resize={resize} />;
+        return <Venus id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 3:
-        return <Earth id={id} resize={resize} />;
+        return <Earth id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 4:
-        return <Mars id={id} resize={resize} />;
+        return <Mars id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 5:
-        return <Jupiter id={id} resize={resize} />;
+        return <Jupiter id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 6:
-        return <Saturn id={id} resize={resize} />;
+        return <Saturn id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 7:
-        return <Uranus id={id} resize={resize} />;
+        return <Uranus id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 8:
-        return <Neptune id={id} />;
+        return <Neptune id={id} fixSpeed={this.state.speed}/>;
 
       default:
         break;
@@ -89,22 +59,25 @@ class Menu extends Component<{}, State> {
     this.setState({
       primary: 0,
       secondary: 0,
+      speed: 1
     });
   };
 
   
 
-  select = (e: EventTarget & HTMLInputElement) => {
+  select = (e: EventTarget & HTMLInputElement, speedUp: number) => {
     var value = Number(e.value);
     if (e.checked) {
       if (!this.state.primary) {
         this.setState({
           primary: value,
+          speed: speedUp
         });
       } else if (value > this.state.primary) {
         this.setState({
           secondary: this.state.primary,
           primary: value,
+          speed: speedUp
         });
       } else {
         this.setState({
@@ -112,10 +85,14 @@ class Menu extends Component<{}, State> {
         });
       }
     } else {
-      this.setState({
-        primary: 0,
-      });
+      this.reset();
     }
+
+
+
+
+
+
   };
 
   render() {
@@ -149,7 +126,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 1);
             }}
             value={1}
           >
@@ -158,7 +135,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 1);
             }}
             value={2}
           >
@@ -167,7 +144,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 1);
             }}
             value={3}
           >
@@ -176,7 +153,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 1);
             }}
             value={4}
           >
@@ -186,7 +163,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 8);
             }}
             value={5}
           >
@@ -195,7 +172,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 8);
             }}
             value={6}
           >
@@ -204,7 +181,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 16);
             }}
             value={7}
           >
@@ -213,7 +190,7 @@ class Menu extends Component<{}, State> {
           <ToggleButton
             className="btn"
             onChange={(e) => {
-              this.select(e.currentTarget);
+              this.select(e.currentTarget, 16);
             }}
             value={8}
           >

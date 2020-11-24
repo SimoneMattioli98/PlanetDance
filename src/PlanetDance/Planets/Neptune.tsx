@@ -3,14 +3,14 @@ import Orbit from "../Orbit";
 
 interface Prop {
   id: string;
+  fixSpeed: number;
 }
 export default class Neptune extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/neptune.png?raw=true";
-  // orbitDimension = 700;
   orbitDimension = 60;
   orbitDirection = "";
-  orbitSpeed = 823.9;
+  orbitSpeed = 823.9 / this.props.fixSpeed;
   planetDimension = 10;
   render() {
     return (
