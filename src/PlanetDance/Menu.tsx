@@ -4,7 +4,7 @@ import Lines from "./Lines";
 import Earth from "./Planets/Earth";
 import Mercury from "./Planets/Mercury";
 import Neptune from "./Planets/Neptune";
-import Sun_prova from "./Planets/Sun_prova";
+import Sun from "./Planets/Sun";
 import Mars from "./Planets/Mars";
 import Uranus from "./Planets/Uranus";
 import Venus from "./Planets/Venus";
@@ -125,7 +125,7 @@ class Menu extends Component<{}, State> {
           <Button className="reset btn" onClick={this.reset} variant="primary">
             Reset
           </Button>
-          <Sun_prova />
+          <Sun />
           {this.getPlanet(this.state.primary, "primary")}
           {this.getPlanet(this.state.secondary, "secondary")}
           <Lines />

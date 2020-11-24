@@ -9,15 +9,13 @@
 
 
 #universe {
-  
   background: url("./img/universe.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
 }
-#stars {
+#universe > #stars {
   position: absolute;
   background: url("https://img.pngio.com/star-png-images-transparent-free-download-pngmartcom-transparent-stars-background-1680_480.png")  no-repeat center center fixed;
   -webkit-background-size: cover;

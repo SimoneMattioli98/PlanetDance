@@ -23,7 +23,11 @@ class Wrapper extends Component<{}, {}> {
           height: "100%",
         }}
       >
-        <div id="stars"></div>
+        <div style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+        }}id="stars"></div>
         <PlanetDance />
       
       </div>

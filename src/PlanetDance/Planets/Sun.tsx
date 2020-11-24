@@ -1,18 +1,27 @@
-import React from "react";
-import { Component } from "react";
-import "./Sun.css";
+import React, { Component } from "react";
+import Orbit from "../Orbit";
 
-class Sun extends Component<{}, {}> {
+export default class Sun extends Component<{}, {}> {
+  image =
+    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/sun.gif?raw=true";
+
+  // orbitDimension = this.props.resize ? 700 / 2 : 700; //308
+  orbitDimension = 30;
+  orbitDirection = "";
+  orbitSpeed = 0;
+  planetDimension = 20;
   render() {
-     
     return (
-      <img
-        alt = "Sun image"
-        id="sun_prova"
-        src="https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/sun.gif?raw=true"
-      />
+      <Orbit
+        orbitDimension={this.orbitDimension}
+        orbitDirection={this.orbitDirection}
+        orbitSpeed={this.orbitSpeed}
+        planet={{
+          planetDimension: this.planetDimension,
+          planetName: "sun",
+          planetImage: this.image,
+        }}
+      ></Orbit>
     );
   }
 }
-
-export default Sun;
