@@ -34,7 +34,7 @@ export default class Planet extends Component<PlanetProps, {}> {
         width: "100%"
       }
       planetStyle = {
-        width: "10%",
+        width: "30%",
         height: "auto",
       };
     }else{

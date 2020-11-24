@@ -8,7 +8,7 @@ export default class Neptune extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/neptune.png?raw=true";
   // orbitDimension = 700;
-  orbitDimension = 30;
+  orbitDimension = 60;
   orbitDirection = "";
   orbitSpeed = 823.9;
   planetDimension = 10;

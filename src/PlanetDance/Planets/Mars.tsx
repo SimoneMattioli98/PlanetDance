@@ -10,10 +10,10 @@ export default class Mars extends Component<Prop, {}> {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/mars.png?raw=true";
   // orbitDimension = this.props.resize ? 600 / 2 : 600;
-  orbitDimension = 30;
+  orbitDimension = 60;
   orbitDirection = "";
   orbitSpeed = 9.4;
-  planetDimension = 10;
+  planetDimension = 5;
 
   render() {
     return (

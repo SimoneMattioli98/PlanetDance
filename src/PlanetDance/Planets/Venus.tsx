@@ -10,7 +10,7 @@ export default class Venus extends Component<Prop, {}> {
   image =
     "https://raw.githubusercontent.com/SimoneMattioli98/PlanetDance/master/src/PlanetDance/img/venus.svg";
   // orbitDimension = this.props.resize ? 350 / 2 : 350;
-  orbitDimension = 10;
+  orbitDimension = this.props.resize ? 20 / 2 : 20;
   orbitDirection = "";
   orbitSpeed = 3.07;
   planetDimension = 10;
