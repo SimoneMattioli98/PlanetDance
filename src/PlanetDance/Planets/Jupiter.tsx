@@ -1,13 +1,8 @@
-import React, { Component } from "react";
-import Orbit from "../Orbit";
 
-interface Prop {
-  id: string;
-  resize: boolean;
-  fixSpeed: number;
-}
+import AbstractPlanet from "./AbstractPlanet";
 
-export default class Jupiter extends Component<Prop, {}> {
+
+export default class Jupiter extends AbstractPlanet {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/jupiter.png?raw=true";
 
@@ -15,18 +10,5 @@ export default class Jupiter extends Component<Prop, {}> {
   orbitDirection = "";
   orbitSpeed = 59.3 / this.props.fixSpeed;
   planetDimension = 8;
-  render() {
-    return (
-      <Orbit
-        orbitDimension={this.orbitDimension}
-        orbitDirection={this.orbitDirection}
-        orbitSpeed={this.orbitSpeed}
-        planet={{
-          planetDimension: this.planetDimension,
-          planetName: this.props.id,
-          planetImage: this.image,
-        }}
-      ></Orbit>
-    );
-  }
+ 
 }

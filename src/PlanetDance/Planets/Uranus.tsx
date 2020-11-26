@@ -1,31 +1,11 @@
-import React, { Component } from "react";
-import Orbit from "../Orbit";
+import AbstractPlanet from "./AbstractPlanet";
 
-interface Prop {
-  id: string;
-  resize: boolean;
-  fixSpeed: number;
-
-}
-export default class Uranus extends Component<Prop, {}> {
+export default class Uranus extends AbstractPlanet {
   image =
     "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/uranus.png?raw=true";
   orbitDimension = this.props.resize ? 45 / 2 : 45;
   orbitDirection = "";
   orbitSpeed = 420.08 / this.props.fixSpeed;
   planetDimension = 10;
-  render() {
-    return (
-      <Orbit
-        orbitDimension={this.orbitDimension}
-        orbitDirection={this.orbitDirection}
-        orbitSpeed={this.orbitSpeed}
-        planet={{
-          planetDimension: this.planetDimension,
-          planetName: this.props.id,
-          planetImage: this.image,
-        }}
-      ></Orbit>
-    );
-  }
+  
 }

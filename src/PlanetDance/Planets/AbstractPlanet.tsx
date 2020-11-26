@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import Orbit from "../Orbit";
 
-export default class Sun extends Component<{}, {}> {
-  image =
-    "https://github.com/SimoneMattioli98/PlanetDance/blob/master/src/PlanetDance/img/sun.gif?raw=true";
+interface Prop {
+  id: string;
+  resize: boolean;
+  fixSpeed: number;
+}
 
-    orbitDimension = 30;
-  orbitDirection = "";
-  orbitSpeed = 0;
-  planetDimension = 20;
+export default abstract class AbstractPlanet extends Component<Prop, {}> {
+  abstract image = "";
+
+  abstract orbitDimension = 0;
+  abstract orbitDirection = "";
+  abstract orbitSpeed = 0;
+  abstract planetDimension = 0;
   render() {
     return (
       <Orbit
@@ -17,7 +22,7 @@ export default class Sun extends Component<{}, {}> {
         orbitSpeed={this.orbitSpeed}
         planet={{
           planetDimension: this.planetDimension,
-          planetName: "sun",
+          planetName: this.props.id,
           planetImage: this.image,
         }}
       ></Orbit>

@@ -19,7 +19,10 @@ interface State {
 }
 
 
+
+
 class Menu extends Component<{}, State> {
+    
   constructor(props: any) {
     super(props);
 
@@ -29,6 +32,7 @@ class Menu extends Component<{}, State> {
       speed: 1
     };
   }
+  
 
   getPlanet = (value: number, id: string) => {
     var resize = this.state.primary > value;
@@ -48,7 +52,7 @@ class Menu extends Component<{}, State> {
       case 7:
         return <Uranus id={id} resize={resize} fixSpeed={this.state.speed}/>;
       case 8:
-        return <Neptune id={id} fixSpeed={this.state.speed}/>;
+        return <Neptune id={id} fixSpeed={this.state.speed} resize = {false}/>;
 
       default:
         break;
